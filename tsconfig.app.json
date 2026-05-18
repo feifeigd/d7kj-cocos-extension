@@ -22,5 +22,12 @@
         "noUnusedParameters": false,
         "noFallthroughCasesInSwitch": true
     },
-    "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src/vite-env.d.ts"]
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "src/**/*.vue",
+        "src/vite-env.d.ts",
+        "node_modules/@cocos/creator-types/engine/cc.d.ts",
+        "node_modules/@cocos/creator-types/editor/index.d.ts"
+    ]
 }

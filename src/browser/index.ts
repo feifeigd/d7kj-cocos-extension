@@ -7,6 +7,15 @@ export const methods = {
     getVersion() {
         return Editor.App.version;
     },
+    async rotateCamera(num = 10) {
+        const result = await Editor.Message.request('scene', 'execute-scene-script', {
+            name,
+            method: 'rotateCamera',
+            args: [num],
+        });
+        console.log(`rotateCamera result: ${result}`);
+        return result;
+    },
 };
 
 export async function load() {

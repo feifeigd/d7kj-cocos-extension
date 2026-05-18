@@ -20,6 +20,8 @@ export default defineConfig(({ mode }) => {
                 entry: {
                     browser: './src/browser/index.ts',
                     panel: './src/panels/panel.ts',
+                    // 场景扩展的入口文件，构建后会在 dist 目录下生成 scene.cjs
+                    scene: './src/scene.ts',
                 },
                 formats: ['cjs'],
                 fileName: (_, entryName) => `${entryName}.cjs`,
@@ -31,6 +33,10 @@ export default defineConfig(({ mode }) => {
                 : null,
             target: 'modules',
             minify: false,
+            rollupOptions: {
+                // cc 由 Cocos 编辑器运行时提供，构建时不应尝试打包解析
+                external: ['cc'],
+            },
             sourcemap: isDev
                 ? process.platform === 'win32'
                     ? 'inline'

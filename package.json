@@ -36,6 +36,11 @@
                 "path": "i18n:menu.panel/d7kj-cocos-extension",
                 "label": "send to panel",
                 "message": "increase"
+            },
+            {
+                "path": "i18n:menu.panel/d7kj-cocos-extension",
+                "label": "旋转摄像机",
+                "message": "rotate-camera"
             }
         ],
         "messages": {
@@ -53,7 +58,15 @@
                 "methods": [
                     "default.increase"
                 ]
+            },
+            "rotate-camera": {
+                "methods": [
+                    "rotateCamera"
+                ]
             }
+        },
+        "scene": {
+            "script": "./dist/scene.cjs"
         }
     },
     "panels": {

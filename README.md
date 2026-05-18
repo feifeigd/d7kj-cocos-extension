@@ -13,3 +13,5 @@ npm run dev
 
 npm run build
 ```
+
+## 这是一个基于 vue-element-plus 的 cocos 扩展项目
