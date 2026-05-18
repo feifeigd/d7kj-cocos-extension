@@ -19,6 +19,7 @@ export default defineConfig(({ mode }) => {
             lib: {
                 entry: {
                     browser: './src/browser/index.ts',
+                    "assets-menu": './src/assets-menu.ts',
                     panel: './src/panels/panel.ts',
                     // 场景扩展的入口文件，构建后会在 dist 目录下生成 scene.cjs
                     scene: './src/scene.ts',

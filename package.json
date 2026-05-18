@@ -26,6 +26,15 @@
         "vue-tsc": "^2.1.10"
     },
     "contributions": {
+        "assets": {
+            "menu": {
+                "methods": "dist/assets-menu.cjs",
+                "createMenu": "onCreateMenu",
+                "assetMenu": "onAssetMenu",
+                "dbMenu": "onDBMenu",
+                "panelMenu": "onPanelMenu"
+            }
+        },
         "menu": [
             {
                 "path": "i18n:menu.panel/d7kj-cocos-extension",
